@@ -360,42 +360,63 @@ function buildReview() {
 }
 
 function buildEmailBody() {
-  const chunks = summarySections.map((section) => {
+  const intro = [
+    "Hola equipo de Ideamos,",
+    "",
+    "Llegó un nuevo brief para campaña de Google Ads. Comparto abajo el resumen completo en formato legible para poder revisar, cotizar y avanzar con la configuración.",
+    "",
+  ];
+
+  const sections = summarySections.map((section) => {
     const lines = section.items
       .map(([label, name]) => {
         const value = getFieldValue(name);
         if (!value || (Array.isArray(value) && !value.length)) {
           return null;
         }
-        return `${label}: ${formatValue(value)}`;
+        return `- ${label}: ${formatValue(value)}`;
       })
       .filter(Boolean);
 
-    return [`${section.title.toUpperCase()}`, ...lines].join("\n");
-  });
+    if (!lines.length) {
+      return null;
+    }
 
-  return chunks.join("\n\n");
+    return [`${section.title}`, ...lines].join("\n");
+  }).filter(Boolean);
+
+  const closing = [
+    "",
+    "Fin del brief.",
+  ];
+
+  return [...intro, ...sections, ...closing].join("\n");
 }
 
 function buildPayload() {
   const payload = new FormData();
   const companyName = getFieldValue("company_name") || "Nuevo brief";
+  const contactName = getFieldValue("contact_name") || companyName;
+  const contactEmail = getFieldValue("contact_email");
+  const leadWhatsapp = getFieldValue("lead_whatsapp");
 
   payload.append("_subject", `Nuevo brief Google Ads - ${companyName}`);
   payload.append("_captcha", "false");
-  payload.append("_template", "table");
-  payload.append("Origen", "GitHub Pages - Ideamos Google Ads Intake");
-  payload.append("Resumen", buildEmailBody());
+  payload.append("_template", "basic");
 
-  summarySections.forEach((section) => {
-    section.items.forEach(([label, name]) => {
-      const value = getFieldValue(name);
-      if (!value || (Array.isArray(value) && !value.length)) {
-        return;
-      }
-      payload.append(`${section.title} | ${label}`, formatValue(value));
-    });
-  });
+  if (contactEmail) {
+    payload.append("_replyto", contactEmail);
+    payload.append("email", contactEmail);
+  }
+
+  payload.append("name", contactName);
+  payload.append("empresa", companyName);
+
+  if (leadWhatsapp) {
+    payload.append("whatsapp", formatValue(leadWhatsapp));
+  }
+
+  payload.append("mensaje", buildEmailBody());
 
   return payload;
 }
