@@ -360,6 +360,28 @@ function buildReview() {
 }
 
 function buildEmailBody() {
+  const companyName = getFieldValue("company_name") || "Sin completar";
+  const contactName = getFieldValue("contact_name") || "Sin completar";
+  const contactEmail = getFieldValue("contact_email") || "Sin completar";
+  const leadWhatsapp = getFieldValue("lead_whatsapp") || "Sin completar";
+
+  const identityBlock = [
+    "EMAIL",
+    contactEmail,
+    "",
+    "NOMBRE",
+    contactName,
+    "",
+    "EMPRESA",
+    companyName,
+    "",
+    "WHATSAPP",
+    leadWhatsapp,
+    "",
+    "MENSAJE",
+    "",
+  ];
+
   const intro = [
     "Hola equipo de Ideamos,",
     "",
@@ -385,11 +407,11 @@ function buildEmailBody() {
         return null;
       }
 
-      return [`${section.title.toUpperCase()}`, "", ...lines, ""].join("\n");
+      return [`${section.title.toUpperCase()}`, "----------------", ...lines, ""].join("\n");
     })
     .filter(Boolean);
 
-  return [...intro, ...sections, "", "Fin del brief."].join("\n");
+  return [...identityBlock, ...intro, ...sections, "", "Fin del brief."].join("\n");
 }
 
 function buildPayload() {
@@ -405,14 +427,6 @@ function buildPayload() {
 
   if (contactEmail) {
     payload.append("_replyto", contactEmail);
-    payload.append("EMAIL", contactEmail);
-  }
-
-  payload.append("NOMBRE", contactName);
-  payload.append("EMPRESA", companyName);
-
-  if (leadWhatsapp) {
-    payload.append("WHATSAPP", formatValue(leadWhatsapp));
   }
 
   payload.append("MENSAJE", buildEmailBody());
