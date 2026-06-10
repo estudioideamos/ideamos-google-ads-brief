@@ -26,9 +26,9 @@ const summarySections = [
       ["Sitio web", "website"],
       ["Contacto", "contact_name"],
       ["Email", "contact_email"],
-      ["Teléfono", "contact_phone"],
+      ["Telefono", "contact_phone"],
       ["Horarios", "business_hours"],
-      ["Dirección o cobertura", "business_address"],
+      ["Direccion o cobertura", "business_address"],
       ["Sucursales", "branches"],
     ],
   },
@@ -43,7 +43,7 @@ const summarySections = [
     ],
   },
   {
-    title: "Público",
+    title: "Publico",
     items: [
       ["Cliente ideal", "ideal_customer"],
       ["Tipo de cliente", "client_type"],
@@ -58,7 +58,7 @@ const summarySections = [
       ["Presupuesto mensual", "monthly_budget"],
       ["Tope diario", "daily_cap"],
       ["Valor promedio", "average_sale"],
-      ["Inversión por lead", "target_cpl"],
+      ["Inversion por lead", "target_cpl"],
       ["Capacidad mensual", "monthly_capacity"],
     ],
   },
@@ -77,19 +77,19 @@ const summarySections = [
     items: [
       ["Competidores", "competitors"],
       ["Sitios competidores", "competitor_sites"],
-      ["Búsquedas habituales", "search_terms"],
+      ["Busquedas habituales", "search_terms"],
       ["Consultas no deseadas", "bad_leads"],
-      ["Términos a excluir", "negative_terms"],
+      ["Terminos a excluir", "negative_terms"],
       ["Notas legales o bloqueos", "compliance_notes"],
     ],
   },
   {
     title: "Accesos",
     items: [
-      ["Teléfono para anuncios", "ads_phone"],
+      ["Telefono para anuncios", "ads_phone"],
       ["WhatsApp receptor", "lead_whatsapp"],
       ["Email receptor", "lead_email"],
-      ["Página principal", "landing_page"],
+      ["Pagina principal", "landing_page"],
       ["Tiene Google Ads", "has_google_ads"],
       ["Email administrador", "ads_admin_email"],
       ["ID de Google Ads", "ads_account_id"],
@@ -103,38 +103,38 @@ const validators = {
   empresa: [
     ["company_name", "Decinos el nombre de la empresa."],
     ["website", "Necesitamos el sitio web o landing principal."],
-    ["contact_name", "Indicá el contacto responsable."],
-    ["contact_email", "Necesitamos un email de contacto válido."],
-    ["contact_phone", "Compartinos un teléfono o WhatsApp."],
+    ["contact_name", "Indica el contacto responsable."],
+    ["contact_email", "Necesitamos un email de contacto valido."],
+    ["contact_phone", "Compartinos un telefono o WhatsApp."],
   ],
   objetivo: [
-    ["primary_goal", "Seleccioná al menos un objetivo principal."],
-    ["ideal_lead", "Definí la consulta o venta ideal."],
-    ["promoted_services", "Contanos qué querés promocionar."],
+    ["primary_goal", "Selecciona al menos un objetivo principal."],
+    ["ideal_lead", "Defini la consulta o venta ideal."],
+    ["promoted_services", "Contanos que queres promocionar."],
   ],
   publico: [
-    ["ideal_customer", "Describí a qué cliente quieren atraer."],
-    ["client_type", "Elegí el tipo de cliente."],
-    ["service_zones", "Indicanos dónde prestan servicio."],
+    ["ideal_customer", "Describi a que cliente quieren atraer."],
+    ["client_type", "Elegi el tipo de cliente."],
+    ["service_zones", "Indicanos donde prestan servicio."],
   ],
   presupuesto: [
     ["monthly_budget", "Necesitamos una referencia de presupuesto mensual."],
-    ["average_sale", "Compartinos el valor promedio de una venta o contratación."],
-    ["target_cpl", "Definí cuánto vale para ustedes una consulta de calidad."],
-    ["monthly_capacity", "Contanos cuántos clientes nuevos pueden atender por mes."],
+    ["average_sale", "Compartinos el valor promedio de una venta o contratacion."],
+    ["target_cpl", "Defini cuanto vale para ustedes una consulta de calidad."],
+    ["monthly_capacity", "Contanos cuantos clientes nuevos pueden atender por mes."],
   ],
   diferenciales: [
-    ["value_prop", "Necesitamos entender por qué alguien debería elegirlos."],
-    ["main_benefits", "Mencioná los beneficios principales del servicio."],
+    ["value_prop", "Necesitamos entender por que alguien deberia elegirlos."],
+    ["main_benefits", "Menciona los beneficios principales del servicio."],
   ],
   competencia: [
-    ["search_terms", "Compartinos cómo suelen buscar sus clientes lo que ofrecen."],
+    ["search_terms", "Compartinos como suelen buscar sus clientes lo que ofrecen."],
   ],
   accesos: [
-    ["lead_whatsapp", "Necesitamos el WhatsApp que recibirá las consultas."],
-    ["lead_email", "Necesitamos el email que recibirá los formularios."],
-    ["landing_page", "Indicanos la página destino principal."],
-    ["lead_owner", "Definí quién responde los contactos."],
+    ["lead_whatsapp", "Necesitamos el WhatsApp que recibira las consultas."],
+    ["lead_email", "Necesitamos el email que recibira los formularios."],
+    ["landing_page", "Indicanos la pagina destino principal."],
+    ["lead_owner", "Defini quien responde los contactos."],
   ],
 };
 
@@ -263,12 +263,12 @@ function validateStep(step) {
     }
 
     if (name.includes("email") && !isValidEmail(String(value))) {
-      markError(name, "Ingresá un email válido.");
+      markError(name, "Ingresa un email valido.");
       isValid = false;
     }
 
     if ((name === "website" || name === "landing_page") && !isValidUrl(String(value))) {
-      markError(name, "Ingresá una web válida. Puede ser con o sin http:// o https://.");
+      markError(name, "Ingresa una web valida. Puede ser con o sin http:// o https://.");
       isValid = false;
     }
   });
@@ -363,34 +363,33 @@ function buildEmailBody() {
   const intro = [
     "Hola equipo de Ideamos,",
     "",
-    "Llegó un nuevo brief para campaña de Google Ads. Comparto abajo el resumen completo en formato legible para poder revisar, cotizar y avanzar con la configuración.",
+    "Llego un nuevo brief para campana de Google Ads.",
+    "Comparto abajo el resumen completo en un formato claro para revisar, cotizar y avanzar con la configuracion.",
     "",
   ];
 
-  const sections = summarySections.map((section) => {
-    const lines = section.items
-      .map(([label, name]) => {
-        const value = getFieldValue(name);
-        if (!value || (Array.isArray(value) && !value.length)) {
-          return null;
-        }
-        return `- ${label}: ${formatValue(value)}`;
-      })
-      .filter(Boolean);
+  const sections = summarySections
+    .map((section) => {
+      const lines = section.items
+        .map(([label, name]) => {
+          const value = getFieldValue(name);
+          if (!value || (Array.isArray(value) && !value.length)) {
+            return null;
+          }
 
-    if (!lines.length) {
-      return null;
-    }
+          return `- ${label}: ${formatValue(value)}`;
+        })
+        .filter(Boolean);
 
-    return [`${section.title}`, ...lines].join("\n");
-  }).filter(Boolean);
+      if (!lines.length) {
+        return null;
+      }
 
-  const closing = [
-    "",
-    "Fin del brief.",
-  ];
+      return [`${section.title.toUpperCase()}`, "", ...lines, ""].join("\n");
+    })
+    .filter(Boolean);
 
-  return [...intro, ...sections, ...closing].join("\n");
+  return [...intro, ...sections, "", "Fin del brief."].join("\n");
 }
 
 function buildPayload() {
@@ -406,17 +405,17 @@ function buildPayload() {
 
   if (contactEmail) {
     payload.append("_replyto", contactEmail);
-    payload.append("email", contactEmail);
+    payload.append("EMAIL", contactEmail);
   }
 
-  payload.append("name", contactName);
-  payload.append("empresa", companyName);
+  payload.append("NOMBRE", contactName);
+  payload.append("EMPRESA", companyName);
 
   if (leadWhatsapp) {
-    payload.append("whatsapp", formatValue(leadWhatsapp));
+    payload.append("WHATSAPP", formatValue(leadWhatsapp));
   }
 
-  payload.append("mensaje", buildEmailBody());
+  payload.append("MENSAJE", buildEmailBody());
 
   return payload;
 }
@@ -540,7 +539,7 @@ async function handleSubmit(event) {
     showSubmitFeedback("Brief enviado correctamente.", "is-success");
   } catch (_error) {
     showSubmitFeedback(
-      "No pudimos confirmar el envío automático. Te abrimos un mail de respaldo para que no pierdas la información.",
+      "No pudimos confirmar el envio automatico. Te abrimos un mail de respaldo para que no pierdas la informacion.",
       "is-error",
     );
     openMailFallback();
