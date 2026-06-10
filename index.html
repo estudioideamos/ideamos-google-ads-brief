@@ -17,30 +17,45 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <div class="page-glow page-glow--left" aria-hidden="true"></div>
+    <div class="page-glow page-glow--right" aria-hidden="true"></div>
+
     <div class="site-shell">
       <aside class="info-panel">
-        <a class="brand" href="https://ideamos.com.ar/" target="_blank" rel="noreferrer">
-          <span class="brand-mark">Ideamos</span>
-          <span class="brand-sub">Google Ads Intake</span>
-        </a>
+        <div class="brand-wrap">
+          <a class="brand" href="https://ideamos.com.ar/" target="_blank" rel="noreferrer">
+            <img
+              class="brand-logo"
+              src="https://ideamos.com.ar/wp-content/uploads/2025/07/Sin-titulo-3.png"
+              alt="Ideamos"
+            />
+            <span class="brand-sub">Google Ads Intake</span>
+          </a>
+        </div>
 
         <div class="panel-copy">
-          <p class="eyebrow">Campanas orientadas a resultados</p>
-          <h1>Contanos tu negocio y armamos una campana lista para convertir.</h1>
+          <p class="eyebrow">Campañas orientadas a resultados</p>
+          <h1>Contanos tu negocio y armamos una campaña lista para convertir.</h1>
           <p class="lead">
-            Este formulario nos ayuda a definir oferta, publico, presupuesto y
-            restricciones antes de configurar tu campana de Google Ads.
+            Este formulario nos ayuda a definir oferta, público, presupuesto y
+            restricciones antes de configurar tu campaña de Google Ads.
           </p>
         </div>
 
-        <div class="panel-card">
-          <span class="card-kicker">Que vamos a preparar con esta info</span>
+        <div class="panel-card panel-card--highlight">
+          <span class="card-kicker">Qué vamos a preparar con esta info</span>
           <ul class="feature-list">
             <li>Mensajes alineados a tu propuesta de valor</li>
-            <li>Segmentacion geografica y comercial mas precisa</li>
-            <li>Configuracion enfocada en consultas de calidad</li>
-            <li>Un brief claro para avanzar rapido con tu cuenta</li>
+            <li>Segmentación geográfica y comercial más precisa</li>
+            <li>Configuración enfocada en consultas de calidad</li>
+            <li>Un brief claro para avanzar rápido con tu cuenta</li>
           </ul>
+        </div>
+
+        <div class="insight-ribbon" aria-hidden="true">
+          <span>Diseño boutique</span>
+          <span>Estrategia</span>
+          <span>Performance</span>
         </div>
 
         <dl class="panel-metrics">
@@ -50,7 +65,7 @@
           </div>
           <div>
             <dt>Entrega</dt>
-            <dd>Se envia a hola@ideamos.com.ar</dd>
+            <dd>Se envía a hola@ideamos.com.ar</dd>
           </div>
           <div>
             <dt>Guardado</dt>
@@ -63,9 +78,9 @@
         <header class="form-header">
           <div>
             <p class="eyebrow">Brief de onboarding</p>
-            <h2>Preparacion de campana Google Ads</h2>
+            <h2>Preparación de campaña Google Ads</h2>
             <p class="section-lead">
-              Completanos la informacion clave para lanzar una campana bien enfocada desde el primer dia.
+              Completanos la información clave para lanzar una campaña bien enfocada desde el primer día.
             </p>
           </div>
 
@@ -118,26 +133,34 @@
               </label>
 
               <label class="field">
-                <span>Telefono o WhatsApp *</span>
+                <span>Teléfono o WhatsApp *</span>
                 <input type="tel" name="contact_phone" autocomplete="tel" />
                 <small class="field-error"></small>
               </label>
 
               <label class="field">
-                <span>Horarios de atencion</span>
+                <span>Horarios de atención</span>
                 <input type="text" name="business_hours" placeholder="Lun a Vie de 9 a 18 hs" />
                 <small class="field-error"></small>
               </label>
 
               <label class="field field--full">
-                <span>Direccion comercial o zonas de cobertura</span>
-                <textarea name="business_address" rows="3" placeholder="Sucursal principal, barrios, ciudades o provincias donde operan"></textarea>
+                <span>Dirección comercial o zonas de cobertura</span>
+                <textarea
+                  name="business_address"
+                  rows="3"
+                  placeholder="Sucursal principal, barrios, ciudades o provincias donde operan"
+                ></textarea>
                 <small class="field-error"></small>
               </label>
 
               <label class="field field--full">
                 <span>Sucursales o ubicaciones relevantes</span>
-                <textarea name="branches" rows="3" placeholder="Indicá si tienen varias sedes y en que zonas"></textarea>
+                <textarea
+                  name="branches"
+                  rows="3"
+                  placeholder="Indicá si tienen varias sedes y en qué zonas"
+                ></textarea>
                 <small class="field-error"></small>
               </label>
             </div>
@@ -147,8 +170,8 @@
             <div class="step-copy">
               <span class="step-index">02</span>
               <div>
-                <h3>Objetivo comercial de la campana</h3>
-                <p>Queremos saber que accion vale mas para ustedes y que oferta merece prioridad.</p>
+                <h3>Objetivo comercial de la campaña</h3>
+                <p>Queremos saber qué acción vale más para ustedes y qué oferta merece prioridad.</p>
               </div>
             </div>
 
@@ -157,7 +180,7 @@
                 <legend>Resultado principal que buscan obtener *</legend>
                 <div class="choice-grid">
                   <label class="choice"><input type="checkbox" name="primary_goal" value="Consultas por WhatsApp" />Consultas por WhatsApp</label>
-                  <label class="choice"><input type="checkbox" name="primary_goal" value="Llamadas telefonicas" />Llamadas telefonicas</label>
+                  <label class="choice"><input type="checkbox" name="primary_goal" value="Llamadas telefónicas" />Llamadas telefónicas</label>
                   <label class="choice"><input type="checkbox" name="primary_goal" value="Formularios de contacto" />Formularios de contacto</label>
                   <label class="choice"><input type="checkbox" name="primary_goal" value="Ventas online" />Ventas online</label>
                   <label class="choice"><input type="checkbox" name="primary_goal" value="Visitas al local" />Visitas al local</label>
@@ -167,49 +190,65 @@
               </fieldset>
 
               <label class="field field--full">
-                <span>Como seria una consulta o venta ideal para ustedes? *</span>
-                <textarea name="ideal_lead" rows="4" placeholder="Por ejemplo: consultas con decision de compra, pedidos de presupuesto con datos completos, reservas concretas, etc."></textarea>
+                <span>¿Cómo sería una consulta o venta ideal para ustedes? *</span>
+                <textarea
+                  name="ideal_lead"
+                  rows="4"
+                  placeholder="Por ejemplo: consultas con decisión de compra, pedidos de presupuesto con datos completos, reservas concretas, etc."
+                ></textarea>
                 <small class="field-error"></small>
               </label>
 
               <label class="field field--full">
-                <span>Que productos o servicios desean promocionar? *</span>
-                <textarea name="promoted_services" rows="4" placeholder="Detallanos la oferta general que queres mover con Google Ads"></textarea>
+                <span>¿Qué productos o servicios desean promocionar? *</span>
+                <textarea
+                  name="promoted_services"
+                  rows="4"
+                  placeholder="Detallanos la oferta general que querés mover con Google Ads"
+                ></textarea>
                 <small class="field-error"></small>
               </label>
 
               <label class="field">
                 <span>Producto o servicio prioritario</span>
-                <input type="text" name="priority_service" placeholder="Lo mas importante a empujar primero" />
+                <input type="text" name="priority_service" placeholder="Lo más importante a empujar primero" />
                 <small class="field-error"></small>
               </label>
 
               <label class="field">
-                <span>Que no deberiamos promocionar?</span>
-                <input type="text" name="excluded_offer" placeholder="Servicios secundarios, zonas no rentables, lineas pausadas, etc." />
+                <span>¿Qué no deberíamos promocionar?</span>
+                <input
+                  type="text"
+                  name="excluded_offer"
+                  placeholder="Servicios secundarios, zonas no rentables, líneas pausadas, etc."
+                />
                 <small class="field-error"></small>
               </label>
             </div>
           </section>
 
-          <section class="step" data-step="publico" data-title="Publico">
+          <section class="step" data-step="publico" data-title="Público">
             <div class="step-copy">
               <span class="step-index">03</span>
               <div>
-                <h3>Publico y zonas de impacto</h3>
-                <p>Con esto afinamos la segmentacion y evitamos clics de baja calidad.</p>
+                <h3>Público y zonas de impacto</h3>
+                <p>Con esto afinamos la segmentación y evitamos clics de baja calidad.</p>
               </div>
             </div>
 
             <div class="field-grid">
               <label class="field field--full">
-                <span>A que tipo de cliente quieren llegar? *</span>
-                <textarea name="ideal_customer" rows="4" placeholder="Perfil, necesidad, nivel de urgencia, ticket, rubro o contexto del cliente ideal"></textarea>
+                <span>¿A qué tipo de cliente quieren llegar? *</span>
+                <textarea
+                  name="ideal_customer"
+                  rows="4"
+                  placeholder="Perfil, necesidad, nivel de urgencia, ticket, rubro o contexto del cliente ideal"
+                ></textarea>
                 <small class="field-error"></small>
               </label>
 
               <fieldset class="field-group">
-                <legend>Trabajan con particulares, empresas o ambos? *</legend>
+                <legend>¿Trabajan con particulares, empresas o ambos? *</legend>
                 <div class="radio-stack">
                   <label class="choice"><input type="radio" name="client_type" value="Particulares" />Particulares</label>
                   <label class="choice"><input type="radio" name="client_type" value="Empresas" />Empresas</label>
@@ -220,19 +259,31 @@
 
               <label class="field">
                 <span>Ciudades, provincias o zonas donde ofrecen el servicio *</span>
-                <textarea name="service_zones" rows="4" placeholder="Indicá donde si quieren aparecer"></textarea>
+                <textarea
+                  name="service_zones"
+                  rows="4"
+                  placeholder="Indicá dónde sí quieren aparecer"
+                ></textarea>
                 <small class="field-error"></small>
               </label>
 
               <label class="field">
-                <span>Zonas o ubicaciones que deberiamos excluir</span>
-                <textarea name="excluded_zones" rows="4" placeholder="Lugares donde no trabajan, no entregan o no quieren recibir consultas"></textarea>
+                <span>Zonas o ubicaciones que deberíamos excluir</span>
+                <textarea
+                  name="excluded_zones"
+                  rows="4"
+                  placeholder="Lugares donde no trabajan, no entregan o no quieren recibir consultas"
+                ></textarea>
                 <small class="field-error"></small>
               </label>
 
               <label class="field field--full">
-                <span>Edad, rubro, profesion o rasgos del cliente ideal</span>
-                <textarea name="audience_traits" rows="3" placeholder="Todo detalle que nos ayude a reconocer a quien si vale la pena atraer"></textarea>
+                <span>Edad, rubro, profesión o rasgos del cliente ideal</span>
+                <textarea
+                  name="audience_traits"
+                  rows="3"
+                  placeholder="Todo detalle que nos ayude a reconocer a quién sí vale la pena atraer"
+                ></textarea>
                 <small class="field-error"></small>
               </label>
             </div>
@@ -243,7 +294,7 @@
               <span class="step-index">04</span>
               <div>
                 <h3>Presupuesto y capacidad comercial</h3>
-                <p>Esto ordena expectativas y nos ayuda a calibrar la intensidad de la campana.</p>
+                <p>Esto ordena expectativas y nos ayuda a calibrar la intensidad de la campaña.</p>
               </div>
             </div>
 
@@ -255,26 +306,30 @@
               </label>
 
               <label class="field">
-                <span>Limite diario de inversion</span>
+                <span>Límite diario de inversión</span>
                 <input type="text" name="daily_cap" placeholder="Si ya tienen un tope diario definido" />
                 <small class="field-error"></small>
               </label>
 
               <label class="field">
-                <span>Valor promedio de una venta o contratacion *</span>
+                <span>Valor promedio de una venta o contratación *</span>
                 <input type="text" name="average_sale" placeholder="Ticket o valor estimado por cierre" />
                 <small class="field-error"></small>
               </label>
 
               <label class="field">
-                <span>Cuanto estarian dispuestos a invertir para conseguir una consulta de calidad? *</span>
+                <span>¿Cuánto estarían dispuestos a invertir para conseguir una consulta de calidad? *</span>
                 <input type="text" name="target_cpl" placeholder="Costo por lead o consulta que sigue siendo rentable" />
                 <small class="field-error"></small>
               </label>
 
               <label class="field field--full">
-                <span>Cuantos clientes nuevos podrian atender por mes? *</span>
-                <textarea name="monthly_capacity" rows="3" placeholder="Esto nos ayuda a no empujar mas demanda de la que realmente pueden procesar"></textarea>
+                <span>¿Cuántos clientes nuevos podrían atender por mes? *</span>
+                <textarea
+                  name="monthly_capacity"
+                  rows="3"
+                  placeholder="Esto nos ayuda a no empujar más demanda de la que realmente pueden procesar"
+                ></textarea>
                 <small class="field-error"></small>
               </label>
             </div>
@@ -285,38 +340,54 @@
               <span class="step-index">05</span>
               <div>
                 <h3>Diferenciales, promesa y tono</h3>
-                <p>En esta etapa definimos por que alguien deberia elegirlos y como conviene comunicarlo.</p>
+                <p>En esta etapa definimos por qué alguien debería elegirlos y cómo conviene comunicarlo.</p>
               </div>
             </div>
 
             <div class="field-grid">
               <label class="field field--full">
-                <span>Por que una persona deberia elegirlos frente a la competencia? *</span>
-                <textarea name="value_prop" rows="4" placeholder="Contanos que hacen mejor, distinto o mas confiable que el resto"></textarea>
+                <span>¿Por qué una persona debería elegirlos frente a la competencia? *</span>
+                <textarea
+                  name="value_prop"
+                  rows="4"
+                  placeholder="Contanos qué hacen mejor, distinto o más confiable que el resto"
+                ></textarea>
                 <small class="field-error"></small>
               </label>
 
               <label class="field">
                 <span>Principales beneficios del servicio *</span>
-                <textarea name="main_benefits" rows="4" placeholder="Rapidez, experiencia, garantia, atencion, stock, disponibilidad, financiacion, etc."></textarea>
+                <textarea
+                  name="main_benefits"
+                  rows="4"
+                  placeholder="Rapidez, experiencia, garantía, atención, stock, disponibilidad, financiación, etc."
+                ></textarea>
                 <small class="field-error"></small>
               </label>
 
               <label class="field">
-                <span>Anos de experiencia o trayectoria</span>
-                <input type="text" name="experience_years" placeholder="Ej: mas de 12 anos en el rubro" />
+                <span>Años de experiencia o trayectoria</span>
+                <input type="text" name="experience_years" placeholder="Ej: más de 12 años en el rubro" />
                 <small class="field-error"></small>
               </label>
 
               <label class="field">
                 <span>Promociones, cuotas o beneficios vigentes</span>
-                <textarea name="active_promotions" rows="4" placeholder="Si hoy hay una oferta concreta que conviene incluir en anuncios"></textarea>
+                <textarea
+                  name="active_promotions"
+                  rows="4"
+                  placeholder="Si hoy hay una oferta concreta que conviene incluir en anuncios"
+                ></textarea>
                 <small class="field-error"></small>
               </label>
 
               <label class="field">
                 <span>Frases, promesas o enfoques que no debemos usar</span>
-                <textarea name="copy_restrictions" rows="4" placeholder="Por temas legales, comerciales o de posicionamiento"></textarea>
+                <textarea
+                  name="copy_restrictions"
+                  rows="4"
+                  placeholder="Por temas legales, comerciales o de posicionamiento"
+                ></textarea>
                 <small class="field-error"></small>
               </label>
             </div>
@@ -326,15 +397,15 @@
             <div class="step-copy">
               <span class="step-index">06</span>
               <div>
-                <h3>Competencia, busquedas y restricciones</h3>
-                <p>Esto mejora las keywords, evita ruido y nos alerta sobre posibles problemas de aprobacion.</p>
+                <h3>Competencia, búsquedas y restricciones</h3>
+                <p>Esto mejora las keywords, evita ruido y nos alerta sobre posibles problemas de aprobación.</p>
               </div>
             </div>
 
             <div class="field-grid">
               <label class="field">
                 <span>Principales competidores</span>
-                <textarea name="competitors" rows="4" placeholder="Marcas o empresas con las que compiten mas seguido"></textarea>
+                <textarea name="competitors" rows="4" placeholder="Marcas o empresas con las que compiten más seguido"></textarea>
                 <small class="field-error"></small>
               </label>
 
@@ -345,26 +416,42 @@
               </label>
 
               <label class="field field--full">
-                <span>Que palabras usan habitualmente los clientes para buscar lo que ofrecen? *</span>
-                <textarea name="search_terms" rows="4" placeholder="Keywords, modismos, marcas, categorias o preguntas frecuentes"></textarea>
+                <span>¿Qué palabras usan habitualmente los clientes para buscar lo que ofrecen? *</span>
+                <textarea
+                  name="search_terms"
+                  rows="4"
+                  placeholder="Keywords, modismos, marcas, categorías o preguntas frecuentes"
+                ></textarea>
                 <small class="field-error"></small>
               </label>
 
               <label class="field">
                 <span>Consultas o pedidos que no corresponden con lo que ofrecen</span>
-                <textarea name="bad_leads" rows="4" placeholder="Nos sirve para pensar palabras negativas y filtrar trafico"></textarea>
+                <textarea
+                  name="bad_leads"
+                  rows="4"
+                  placeholder="Nos sirve para pensar palabras negativas y filtrar tráfico"
+                ></textarea>
                 <small class="field-error"></small>
               </label>
 
               <label class="field">
-                <span>Marcas, terminos o productos que deberiamos excluir</span>
-                <textarea name="negative_terms" rows="4" placeholder="Nombres similares, rubros que no quieren tocar o terminos que confunden"></textarea>
+                <span>Marcas, términos o productos que deberíamos excluir</span>
+                <textarea
+                  name="negative_terms"
+                  rows="4"
+                  placeholder="Nombres similares, rubros que no quieren tocar o términos que confunden"
+                ></textarea>
                 <small class="field-error"></small>
               </label>
 
               <label class="field field--full">
-                <span>Restricciones legales, matriculas, avisos o problemas previos en Google Ads</span>
-                <textarea name="compliance_notes" rows="4" placeholder="Si el rubro tiene regulaciones o si ya tuvieron rechazos, suspensiones o verificaciones pendientes"></textarea>
+                <span>Restricciones legales, matrículas, avisos o problemas previos en Google Ads</span>
+                <textarea
+                  name="compliance_notes"
+                  rows="4"
+                  placeholder="Si el rubro tiene regulaciones o si ya tuvieron rechazos, suspensiones o verificaciones pendientes"
+                ></textarea>
                 <small class="field-error"></small>
               </label>
             </div>
@@ -375,13 +462,13 @@
               <span class="step-index">07</span>
               <div>
                 <h3>Canales de respuesta y accesos</h3>
-                <p>Terminamos con los datos operativos para que la campana apunte al lugar correcto y podamos avanzar rapido.</p>
+                <p>Terminamos con los datos operativos para que la campaña apunte al lugar correcto y podamos avanzar rápido.</p>
               </div>
             </div>
 
             <div class="field-grid">
               <label class="field">
-                <span>Telefono que debe aparecer en la campana</span>
+                <span>Teléfono que debe aparecer en la campaña</span>
                 <input type="tel" name="ads_phone" autocomplete="tel" />
                 <small class="field-error"></small>
               </label>
@@ -399,15 +486,15 @@
               </label>
 
               <label class="field">
-                <span>Pagina especifica a la que deben llegar los usuarios *</span>
+                <span>Página específica a la que deben llegar los usuarios *</span>
                 <input type="url" name="landing_page" placeholder="https://..." inputmode="url" />
                 <small class="field-error"></small>
               </label>
 
               <fieldset class="field-group">
-                <legend>Ya cuentan con una cuenta de Google Ads?</legend>
+                <legend>¿Ya cuentan con una cuenta de Google Ads?</legend>
                 <div class="radio-stack">
-                  <label class="choice"><input type="radio" name="has_google_ads" value="Si" />Si</label>
+                  <label class="choice"><input type="radio" name="has_google_ads" value="Sí" />Sí</label>
                   <label class="choice"><input type="radio" name="has_google_ads" value="No" />No</label>
                   <label class="choice"><input type="radio" name="has_google_ads" value="No estoy seguro" />No estoy seguro</label>
                 </div>
@@ -434,18 +521,22 @@
 
               <label class="field field--full">
                 <span>Comentarios finales o contexto que debamos conocer</span>
-                <textarea name="final_notes" rows="4" placeholder="Todo lo que sientan importante para que la configuracion arranque con el pie derecho"></textarea>
+                <textarea
+                  name="final_notes"
+                  rows="4"
+                  placeholder="Todo lo que sientan importante para que la configuración arranque con el pie derecho"
+                ></textarea>
                 <small class="field-error"></small>
               </label>
             </div>
           </section>
 
-          <section class="step" data-step="revision" data-title="Revision">
+          <section class="step" data-step="revision" data-title="Revisión">
             <div class="step-copy">
               <span class="step-index">Final</span>
               <div>
-                <h3>Revision final y envio</h3>
-                <p>Repasa el resumen. Cuando envies, vamos a recibir todo en <strong>hola@ideamos.com.ar</strong>.</p>
+                <h3>Revisión final y envío</h3>
+                <p>Repasá el resumen. Cuando envíes, vamos a recibir todo en <strong>hola@ideamos.com.ar</strong>.</p>
               </div>
             </div>
 
@@ -454,8 +545,8 @@
 
               <div class="submit-card">
                 <p>
-                  Al enviar este brief nos llega la informacion para preparar la cuenta,
-                  la estructura de campanas y los anuncios de forma mas precisa.
+                  Al enviar este brief nos llega la información para preparar la cuenta,
+                  la estructura de campañas y los anuncios de forma más precisa.
                 </p>
                 <button id="submit-button" class="button button--primary button--full" type="submit">
                   Enviar brief a Ideamos
@@ -471,7 +562,7 @@
             </button>
 
             <div class="footer-note">
-              <span>La informacion se guarda automaticamente mientras avanzas.</span>
+              <span>La información se guarda automáticamente mientras avanzás.</span>
             </div>
 
             <button id="next-button" class="button button--primary" type="button">
@@ -482,10 +573,10 @@
 
         <section id="success-state" class="success-state" hidden>
           <p class="eyebrow">Brief enviado</p>
-          <h3>Gracias por completar la informacion.</h3>
+          <h3>Gracias por completar la información.</h3>
           <p>
-            Recibimos tu brief para la campana de Google Ads. El equipo de Ideamos va a usarlo para
-            avanzar con la configuracion y contactarte si hace falta algun dato extra.
+            Recibimos tu brief para la campaña de Google Ads. El equipo de Ideamos va a usarlo para
+            avanzar con la configuración y contactarte si hace falta algún dato extra.
           </p>
           <button id="restart-button" class="button button--ghost" type="button">
             Cargar un nuevo brief
